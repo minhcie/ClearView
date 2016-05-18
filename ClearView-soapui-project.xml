@@ -1,0 +1,1471 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:soapui-project id="ea5bc130-c701-4425-acdf-45bc5890008e" activeEnvironment="Default" name="ClearView" resourceRoot="" soapui-version="5.2.1" abortOnError="false" runType="SEQUENTIAL" xmlns:con="http://eviware.com/soapui/config"><con:settings/><con:interface xsi:type="con:WsdlInterface" id="c6f13e01-2df1-4524-9e29-f77b3599a0d5" wsaVersion="NONE" name="WS_211SanDiegoSoap12" type="wsdl" bindingName="{http://ClearViewPortal.com/211SanDiego/}WS_211SanDiegoSoap12" soapVersion="1_2" anonymous="optional" definition="http://211sandiego.clearviewportal.com/ClearViewWS/CustomServices/WS_211SanDiego.asmx?WSDL" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.actions.iface.tools.axis2.Axis2WSDL2CodeAction@values-local"><![CDATA[<xml-fragment xmlns:con="http://eviware.com/soapui/config">
+  <con:entry key="test-case" value="true"/>
+  <con:entry key="adb writeClasses" value="false"/>
+  <con:entry key="namespace mapping" value="&lt;xml-fragment/>"/>
+  <con:entry key="serverside-interface" value="false"/>
+  <con:entry key="adb wrapClasses" value="false"/>
+  <con:entry key="port name" value="WS_211SanDiegoSoap12"/>
+  <con:entry key="unpack classes" value="false"/>
+  <con:entry key="server-side" value="false"/>
+  <con:entry key="service name" value="WS_211SanDiego"/>
+  <con:entry key="async" value="false"/>
+  <con:entry key="Tool Args" value=""/>
+  <con:entry key="JIBX bindingfile" value=""/>
+  <con:entry key="Use cached WSDL" value="false"/>
+  <con:entry key="sync" value="false"/>
+  <con:entry key="generate all" value="true"/>
+  <con:entry key="Output Directory" value="C:\Source\ClearView"/>
+  <con:entry key="databinding method" value="adb"/>
+  <con:entry key="WSDL" value="http://211sandiego.clearviewportal.com/ClearViewWS/CustomServices/WS_211SanDiego.asmx?WSDL"/>
+  <con:entry key="Package" value="src.main.java"/>
+  <con:entry key="service descriptor" value="false"/>
+</xml-fragment>]]></con:setting><con:setting id="com.eviware.soapui.impl.wsdl.actions.iface.tools.dotnet.DotNetWsdlAction@values-local"><![CDATA[<xml-fragment xmlns:con="http://eviware.com/soapui/config">
+  <con:entry key="protocol" value="SOAP"/>
+  <con:entry key="base url" value=""/>
+  <con:entry key="password" value=""/>
+  <con:entry key="Tool Args" value=""/>
+  <con:entry key="namespace" value=""/>
+  <con:entry key="output directory" value=""/>
+  <con:entry key="username" value=""/>
+  <con:entry key="proxy password" value=""/>
+  <con:entry key="Use cached WSDL" value="true"/>
+  <con:entry key="order" value="false"/>
+  <con:entry key="proxy domain" value=""/>
+  <con:entry key="serverInterface" value="false"/>
+  <con:entry key="sharetypes" value="false"/>
+  <con:entry key="proxy" value=""/>
+  <con:entry key="domain" value=""/>
+  <con:entry key="enableDataBinding" value="false"/>
+  <con:entry key="WSDL" value="http://211sandiego.clearviewportal.com/ClearViewWS/CustomServices/WS_211SanDiego.asmx?WSDL"/>
+  <con:entry key="url key" value=""/>
+  <con:entry key="language" value="CS"/>
+  <con:entry key="proxy username" value=""/>
+  <con:entry key="fields" value="false"/>
+</xml-fragment>]]></con:setting><con:setting id="com.eviware.soapui.impl.wsdl.actions.iface.tools.wsimport.WSImportAction@values-local"><![CDATA[<xml-fragment xmlns:con="http://eviware.com/soapui/config">
+  <con:entry key="wsdlLocation" value=""/>
+  <con:entry key="Use cached WSDL" value="false"/>
+  <con:entry key="HTTP Proxy" value=""/>
+  <con:entry key="WSDL" value="http://211sandiego.clearviewportal.com/ClearViewWS/CustomServices/WS_211SanDiego.asmx?WSDL"/>
+  <con:entry key="Catalog" value=""/>
+  <con:entry key="Source Directory" value="C:\Source\ClearView"/>
+  <con:entry key="Package" value="src.main.java"/>
+  <con:entry key="Keep" value="false"/>
+  <con:entry key="Target Directory" value=""/>
+  <con:entry key="Tool Args" value="-extension"/>
+  <con:entry key="Binding files" value=""/>
+</xml-fragment>]]></con:setting></con:settings><con:definitionCache type="TEXT" rootPart="http://211sandiego.clearviewportal.com/ClearViewWS/CustomServices/WS_211SanDiego.asmx?WSDL"><con:part><con:url>http://211sandiego.clearviewportal.com/ClearViewWS/CustomServices/WS_211SanDiego.asmx?WSDL</con:url><con:content><![CDATA[<wsdl:definitions targetNamespace="http://ClearViewPortal.com/211SanDiego/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://ClearViewPortal.com/211SanDiego/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://ClearViewPortal.com/211SanDiego/">
+      <s:element name="TestConnection">
+        <s:complexType/>
+      </s:element>
+      <s:element name="TestConnectionResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="TestConnectionResult" type="s:boolean"/>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AuthHeader" type="tns:AuthHeader"/>
+      <s:complexType name="AuthHeader">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="CompanyName" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="WebKey" type="s:string"/>
+        </s:sequence>
+        <s:anyAttribute/>
+      </s:complexType>
+      <s:element name="GetLastCustomDataImportDate">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ACDName" type="s:string"/>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetLastCustomDataImportDateResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="GetLastCustomDataImportDateResult" type="s:dateTime"/>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetLastCustomDataID">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ACDName" type="s:string"/>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetLastCustomDataIDResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="GetLastCustomDataIDResult" type="s:long"/>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ImportCustomData">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="CustomDataCollection" type="tns:ArrayOfCustomData"/>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfCustomData">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="CustomData" nillable="true" type="tns:CustomData"/>
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="CustomData">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="ACDName" type="s:string"/>
+          <s:element minOccurs="1" maxOccurs="1" name="CallDate" type="s:dateTime"/>
+          <s:element minOccurs="1" maxOccurs="1" name="DataID" type="s:long"/>
+          <s:element minOccurs="1" maxOccurs="1" name="RelatedCallID" type="s:long"/>
+          <s:element minOccurs="1" maxOccurs="1" name="EmpGroup1ID" type="s:int"/>
+          <s:element minOccurs="1" maxOccurs="1" name="EmpGroup2ID" type="s:int"/>
+          <s:element minOccurs="1" maxOccurs="1" name="EmpGroup3ID" type="s:int"/>
+          <s:element minOccurs="1" maxOccurs="1" name="EmpGroup4ID" type="s:int"/>
+          <s:element minOccurs="1" maxOccurs="1" name="EmpGroup5ID" type="s:int"/>
+          <s:element minOccurs="1" maxOccurs="1" name="RecGroup1ID" type="s:int"/>
+          <s:element minOccurs="1" maxOccurs="1" name="RecGroup2ID" type="s:int"/>
+          <s:element minOccurs="1" maxOccurs="1" name="RecGroup3ID" type="s:int"/>
+          <s:element minOccurs="1" maxOccurs="1" name="RecGroup4ID" type="s:int"/>
+          <s:element minOccurs="1" maxOccurs="1" name="RecGroup5ID" type="s:int"/>
+          <s:element minOccurs="0" maxOccurs="1" name="DataType" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="DataCategory" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="DataClass" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="DataClass2" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="DataClass3" type="s:string"/>
+          <s:element minOccurs="1" maxOccurs="1" name="DataValue" type="s:float"/>
+        </s:sequence>
+      </s:complexType>
+      <s:element name="ImportCustomDataResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ImportCustomDataResult" type="tns:ArrayOfErrorNotifications"/>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfErrorNotifications">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="ErrorNotifications" nillable="true" type="tns:ErrorNotifications"/>
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ErrorNotifications">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="DataID" type="s:long"/>
+          <s:element minOccurs="0" maxOccurs="1" name="FailureReason" type="s:string"/>
+        </s:sequence>
+      </s:complexType>
+      <s:element name="GetLastCustomTimeImportDate">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ACDName" type="s:string"/>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetLastCustomTimeImportDateResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="GetLastCustomTimeImportDateResult" type="s:dateTime"/>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetLastCustomTimeID">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ACDName" type="s:string"/>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetLastCustomTimeIDResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="GetLastCustomTimeIDResult" type="s:long"/>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ImportCustomTime">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="CustomTimeCollection" type="tns:ArrayOfCustomTime"/>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfCustomTime">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="CustomTime" nillable="true" type="tns:CustomTime"/>
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="CustomTime">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="ACDName" type="s:string"/>
+          <s:element minOccurs="1" maxOccurs="1" name="StartDate" type="s:dateTime"/>
+          <s:element minOccurs="1" maxOccurs="1" name="EndDate" type="s:dateTime"/>
+          <s:element minOccurs="1" maxOccurs="1" name="SessionID" type="s:long"/>
+          <s:element minOccurs="1" maxOccurs="1" name="RelatedCallID" type="s:long"/>
+          <s:element minOccurs="1" maxOccurs="1" name="EmpGroup1ID" type="s:int"/>
+          <s:element minOccurs="1" maxOccurs="1" name="EmpGroup2ID" type="s:int"/>
+          <s:element minOccurs="1" maxOccurs="1" name="EmpGroup3ID" type="s:int"/>
+          <s:element minOccurs="1" maxOccurs="1" name="EmpGroup4ID" type="s:int"/>
+          <s:element minOccurs="1" maxOccurs="1" name="EmpGroup5ID" type="s:int"/>
+          <s:element minOccurs="1" maxOccurs="1" name="RecGroup1ID" type="s:int"/>
+          <s:element minOccurs="1" maxOccurs="1" name="RecGroup2ID" type="s:int"/>
+          <s:element minOccurs="1" maxOccurs="1" name="RecGroup3ID" type="s:int"/>
+          <s:element minOccurs="1" maxOccurs="1" name="RecGroup4ID" type="s:int"/>
+          <s:element minOccurs="1" maxOccurs="1" name="RecGroup5ID" type="s:int"/>
+          <s:element minOccurs="0" maxOccurs="1" name="TimeType" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="TimeCategory" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="TimeClass" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="TimeClass2" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="TimeClass3" type="s:string"/>
+        </s:sequence>
+      </s:complexType>
+      <s:element name="ImportCustomTimeResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ImportCustomTimeResult" type="tns:ArrayOfErrorNotifications"/>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="boolean" type="s:boolean"/>
+      <s:element name="dateTime" type="s:dateTime"/>
+      <s:element name="long" type="s:long"/>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="TestConnectionSoapIn">
+    <wsdl:part name="parameters" element="tns:TestConnection"/>
+  </wsdl:message>
+  <wsdl:message name="TestConnectionSoapOut">
+    <wsdl:part name="parameters" element="tns:TestConnectionResponse"/>
+  </wsdl:message>
+  <wsdl:message name="TestConnectionAuthHeader">
+    <wsdl:part name="AuthHeader" element="tns:AuthHeader"/>
+  </wsdl:message>
+  <wsdl:message name="GetLastCustomDataImportDateSoapIn">
+    <wsdl:part name="parameters" element="tns:GetLastCustomDataImportDate"/>
+  </wsdl:message>
+  <wsdl:message name="GetLastCustomDataImportDateSoapOut">
+    <wsdl:part name="parameters" element="tns:GetLastCustomDataImportDateResponse"/>
+  </wsdl:message>
+  <wsdl:message name="GetLastCustomDataImportDateAuthHeader">
+    <wsdl:part name="AuthHeader" element="tns:AuthHeader"/>
+  </wsdl:message>
+  <wsdl:message name="GetLastCustomDataIDSoapIn">
+    <wsdl:part name="parameters" element="tns:GetLastCustomDataID"/>
+  </wsdl:message>
+  <wsdl:message name="GetLastCustomDataIDSoapOut">
+    <wsdl:part name="parameters" element="tns:GetLastCustomDataIDResponse"/>
+  </wsdl:message>
+  <wsdl:message name="GetLastCustomDataIDAuthHeader">
+    <wsdl:part name="AuthHeader" element="tns:AuthHeader"/>
+  </wsdl:message>
+  <wsdl:message name="ImportCustomDataSoapIn">
+    <wsdl:part name="parameters" element="tns:ImportCustomData"/>
+  </wsdl:message>
+  <wsdl:message name="ImportCustomDataSoapOut">
+    <wsdl:part name="parameters" element="tns:ImportCustomDataResponse"/>
+  </wsdl:message>
+  <wsdl:message name="ImportCustomDataAuthHeader">
+    <wsdl:part name="AuthHeader" element="tns:AuthHeader"/>
+  </wsdl:message>
+  <wsdl:message name="GetLastCustomTimeImportDateSoapIn">
+    <wsdl:part name="parameters" element="tns:GetLastCustomTimeImportDate"/>
+  </wsdl:message>
+  <wsdl:message name="GetLastCustomTimeImportDateSoapOut">
+    <wsdl:part name="parameters" element="tns:GetLastCustomTimeImportDateResponse"/>
+  </wsdl:message>
+  <wsdl:message name="GetLastCustomTimeImportDateAuthHeader">
+    <wsdl:part name="AuthHeader" element="tns:AuthHeader"/>
+  </wsdl:message>
+  <wsdl:message name="GetLastCustomTimeIDSoapIn">
+    <wsdl:part name="parameters" element="tns:GetLastCustomTimeID"/>
+  </wsdl:message>
+  <wsdl:message name="GetLastCustomTimeIDSoapOut">
+    <wsdl:part name="parameters" element="tns:GetLastCustomTimeIDResponse"/>
+  </wsdl:message>
+  <wsdl:message name="GetLastCustomTimeIDAuthHeader">
+    <wsdl:part name="AuthHeader" element="tns:AuthHeader"/>
+  </wsdl:message>
+  <wsdl:message name="ImportCustomTimeSoapIn">
+    <wsdl:part name="parameters" element="tns:ImportCustomTime"/>
+  </wsdl:message>
+  <wsdl:message name="ImportCustomTimeSoapOut">
+    <wsdl:part name="parameters" element="tns:ImportCustomTimeResponse"/>
+  </wsdl:message>
+  <wsdl:message name="ImportCustomTimeAuthHeader">
+    <wsdl:part name="AuthHeader" element="tns:AuthHeader"/>
+  </wsdl:message>
+  <wsdl:message name="TestConnectionHttpGetIn"/>
+  <wsdl:message name="TestConnectionHttpGetOut">
+    <wsdl:part name="Body" element="tns:boolean"/>
+  </wsdl:message>
+  <wsdl:message name="GetLastCustomDataImportDateHttpGetIn">
+    <wsdl:part name="ACDName" type="s:string"/>
+  </wsdl:message>
+  <wsdl:message name="GetLastCustomDataImportDateHttpGetOut">
+    <wsdl:part name="Body" element="tns:dateTime"/>
+  </wsdl:message>
+  <wsdl:message name="GetLastCustomDataIDHttpGetIn">
+    <wsdl:part name="ACDName" type="s:string"/>
+  </wsdl:message>
+  <wsdl:message name="GetLastCustomDataIDHttpGetOut">
+    <wsdl:part name="Body" element="tns:long"/>
+  </wsdl:message>
+  <wsdl:message name="GetLastCustomTimeImportDateHttpGetIn">
+    <wsdl:part name="ACDName" type="s:string"/>
+  </wsdl:message>
+  <wsdl:message name="GetLastCustomTimeImportDateHttpGetOut">
+    <wsdl:part name="Body" element="tns:dateTime"/>
+  </wsdl:message>
+  <wsdl:message name="GetLastCustomTimeIDHttpGetIn">
+    <wsdl:part name="ACDName" type="s:string"/>
+  </wsdl:message>
+  <wsdl:message name="GetLastCustomTimeIDHttpGetOut">
+    <wsdl:part name="Body" element="tns:long"/>
+  </wsdl:message>
+  <wsdl:portType name="WS_211SanDiegoSoap">
+    <wsdl:operation name="TestConnection">
+      <wsdl:documentation>Test a connection to the 211 San Diego Web Service</wsdl:documentation>
+      <wsdl:input message="tns:TestConnectionSoapIn"/>
+      <wsdl:output message="tns:TestConnectionSoapOut"/>
+    </wsdl:operation>
+    <wsdl:operation name="GetLastCustomDataImportDate">
+      <wsdl:documentation>Get the last day imported.  Returns '1/1/1900' if no custom data has been imported.</wsdl:documentation>
+      <wsdl:input message="tns:GetLastCustomDataImportDateSoapIn"/>
+      <wsdl:output message="tns:GetLastCustomDataImportDateSoapOut"/>
+    </wsdl:operation>
+    <wsdl:operation name="GetLastCustomDataID">
+      <wsdl:documentation>Get the last custom data id imported.  Returns 0 if no custom data has been imported.</wsdl:documentation>
+      <wsdl:input message="tns:GetLastCustomDataIDSoapIn"/>
+      <wsdl:output message="tns:GetLastCustomDataIDSoapOut"/>
+    </wsdl:operation>
+    <wsdl:operation name="ImportCustomData">
+      <wsdl:documentation>Import custom data into ClearView</wsdl:documentation>
+      <wsdl:input message="tns:ImportCustomDataSoapIn"/>
+      <wsdl:output message="tns:ImportCustomDataSoapOut"/>
+    </wsdl:operation>
+    <wsdl:operation name="GetLastCustomTimeImportDate">
+      <wsdl:documentation>Get the last day imported.  Returns '1/1/1900' if no custom time has been imported.</wsdl:documentation>
+      <wsdl:input message="tns:GetLastCustomTimeImportDateSoapIn"/>
+      <wsdl:output message="tns:GetLastCustomTimeImportDateSoapOut"/>
+    </wsdl:operation>
+    <wsdl:operation name="GetLastCustomTimeID">
+      <wsdl:documentation>Get the last custom time id imported.  Returns 0 if no custom data has been imported.</wsdl:documentation>
+      <wsdl:input message="tns:GetLastCustomTimeIDSoapIn"/>
+      <wsdl:output message="tns:GetLastCustomTimeIDSoapOut"/>
+    </wsdl:operation>
+    <wsdl:operation name="ImportCustomTime">
+      <wsdl:documentation>Import custom time into ClearView</wsdl:documentation>
+      <wsdl:input message="tns:ImportCustomTimeSoapIn"/>
+      <wsdl:output message="tns:ImportCustomTimeSoapOut"/>
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:portType name="WS_211SanDiegoHttpGet">
+    <wsdl:operation name="TestConnection">
+      <wsdl:documentation>Test a connection to the 211 San Diego Web Service</wsdl:documentation>
+      <wsdl:input message="tns:TestConnectionHttpGetIn"/>
+      <wsdl:output message="tns:TestConnectionHttpGetOut"/>
+    </wsdl:operation>
+    <wsdl:operation name="GetLastCustomDataImportDate">
+      <wsdl:documentation>Get the last day imported.  Returns '1/1/1900' if no custom data has been imported.</wsdl:documentation>
+      <wsdl:input message="tns:GetLastCustomDataImportDateHttpGetIn"/>
+      <wsdl:output message="tns:GetLastCustomDataImportDateHttpGetOut"/>
+    </wsdl:operation>
+    <wsdl:operation name="GetLastCustomDataID">
+      <wsdl:documentation>Get the last custom data id imported.  Returns 0 if no custom data has been imported.</wsdl:documentation>
+      <wsdl:input message="tns:GetLastCustomDataIDHttpGetIn"/>
+      <wsdl:output message="tns:GetLastCustomDataIDHttpGetOut"/>
+    </wsdl:operation>
+    <wsdl:operation name="GetLastCustomTimeImportDate">
+      <wsdl:documentation>Get the last day imported.  Returns '1/1/1900' if no custom time has been imported.</wsdl:documentation>
+      <wsdl:input message="tns:GetLastCustomTimeImportDateHttpGetIn"/>
+      <wsdl:output message="tns:GetLastCustomTimeImportDateHttpGetOut"/>
+    </wsdl:operation>
+    <wsdl:operation name="GetLastCustomTimeID">
+      <wsdl:documentation>Get the last custom time id imported.  Returns 0 if no custom data has been imported.</wsdl:documentation>
+      <wsdl:input message="tns:GetLastCustomTimeIDHttpGetIn"/>
+      <wsdl:output message="tns:GetLastCustomTimeIDHttpGetOut"/>
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="WS_211SanDiegoSoap" type="tns:WS_211SanDiegoSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http"/>
+    <wsdl:operation name="TestConnection">
+      <soap:operation soapAction="http://ClearViewPortal.com/211SanDiego/TestConnection" style="document"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+        <soap:header message="tns:TestConnectionAuthHeader" part="AuthHeader" use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetLastCustomDataImportDate">
+      <soap:operation soapAction="http://ClearViewPortal.com/211SanDiego/GetLastCustomDataImportDate" style="document"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+        <soap:header message="tns:GetLastCustomDataImportDateAuthHeader" part="AuthHeader" use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetLastCustomDataID">
+      <soap:operation soapAction="http://ClearViewPortal.com/211SanDiego/GetLastCustomDataID" style="document"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+        <soap:header message="tns:GetLastCustomDataIDAuthHeader" part="AuthHeader" use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ImportCustomData">
+      <soap:operation soapAction="http://ClearViewPortal.com/211SanDiego/ImportCustomData" style="document"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+        <soap:header message="tns:ImportCustomDataAuthHeader" part="AuthHeader" use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetLastCustomTimeImportDate">
+      <soap:operation soapAction="http://ClearViewPortal.com/211SanDiego/GetLastCustomTimeImportDate" style="document"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+        <soap:header message="tns:GetLastCustomTimeImportDateAuthHeader" part="AuthHeader" use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetLastCustomTimeID">
+      <soap:operation soapAction="http://ClearViewPortal.com/211SanDiego/GetLastCustomTimeID" style="document"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+        <soap:header message="tns:GetLastCustomTimeIDAuthHeader" part="AuthHeader" use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ImportCustomTime">
+      <soap:operation soapAction="http://ClearViewPortal.com/211SanDiego/ImportCustomTime" style="document"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+        <soap:header message="tns:ImportCustomTimeAuthHeader" part="AuthHeader" use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="WS_211SanDiegoSoap12" type="tns:WS_211SanDiegoSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http"/>
+    <wsdl:operation name="TestConnection">
+      <soap12:operation soapAction="http://ClearViewPortal.com/211SanDiego/TestConnection" style="document"/>
+      <wsdl:input>
+        <soap12:body use="literal"/>
+        <soap12:header message="tns:TestConnectionAuthHeader" part="AuthHeader" use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetLastCustomDataImportDate">
+      <soap12:operation soapAction="http://ClearViewPortal.com/211SanDiego/GetLastCustomDataImportDate" style="document"/>
+      <wsdl:input>
+        <soap12:body use="literal"/>
+        <soap12:header message="tns:GetLastCustomDataImportDateAuthHeader" part="AuthHeader" use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetLastCustomDataID">
+      <soap12:operation soapAction="http://ClearViewPortal.com/211SanDiego/GetLastCustomDataID" style="document"/>
+      <wsdl:input>
+        <soap12:body use="literal"/>
+        <soap12:header message="tns:GetLastCustomDataIDAuthHeader" part="AuthHeader" use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ImportCustomData">
+      <soap12:operation soapAction="http://ClearViewPortal.com/211SanDiego/ImportCustomData" style="document"/>
+      <wsdl:input>
+        <soap12:body use="literal"/>
+        <soap12:header message="tns:ImportCustomDataAuthHeader" part="AuthHeader" use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetLastCustomTimeImportDate">
+      <soap12:operation soapAction="http://ClearViewPortal.com/211SanDiego/GetLastCustomTimeImportDate" style="document"/>
+      <wsdl:input>
+        <soap12:body use="literal"/>
+        <soap12:header message="tns:GetLastCustomTimeImportDateAuthHeader" part="AuthHeader" use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetLastCustomTimeID">
+      <soap12:operation soapAction="http://ClearViewPortal.com/211SanDiego/GetLastCustomTimeID" style="document"/>
+      <wsdl:input>
+        <soap12:body use="literal"/>
+        <soap12:header message="tns:GetLastCustomTimeIDAuthHeader" part="AuthHeader" use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ImportCustomTime">
+      <soap12:operation soapAction="http://ClearViewPortal.com/211SanDiego/ImportCustomTime" style="document"/>
+      <wsdl:input>
+        <soap12:body use="literal"/>
+        <soap12:header message="tns:ImportCustomTimeAuthHeader" part="AuthHeader" use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="WS_211SanDiegoHttpGet" type="tns:WS_211SanDiegoHttpGet">
+    <http:binding verb="GET"/>
+    <wsdl:operation name="TestConnection">
+      <http:operation location="/TestConnection"/>
+      <wsdl:input>
+        <http:urlEncoded/>
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetLastCustomDataImportDate">
+      <http:operation location="/GetLastCustomDataImportDate"/>
+      <wsdl:input>
+        <http:urlEncoded/>
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetLastCustomDataID">
+      <http:operation location="/GetLastCustomDataID"/>
+      <wsdl:input>
+        <http:urlEncoded/>
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetLastCustomTimeImportDate">
+      <http:operation location="/GetLastCustomTimeImportDate"/>
+      <wsdl:input>
+        <http:urlEncoded/>
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetLastCustomTimeID">
+      <http:operation location="/GetLastCustomTimeID"/>
+      <wsdl:input>
+        <http:urlEncoded/>
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body"/>
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="WS_211SanDiego">
+    <wsdl:port name="WS_211SanDiegoSoap" binding="tns:WS_211SanDiegoSoap">
+      <soap:address location="http://211sandiego.clearviewportal.com/ClearViewWS/CustomServices/WS_211SanDiego.asmx"/>
+    </wsdl:port>
+    <wsdl:port name="WS_211SanDiegoSoap12" binding="tns:WS_211SanDiegoSoap12">
+      <soap12:address location="http://211sandiego.clearviewportal.com/ClearViewWS/CustomServices/WS_211SanDiego.asmx"/>
+    </wsdl:port>
+    <wsdl:port name="WS_211SanDiegoHttpGet" binding="tns:WS_211SanDiegoHttpGet">
+      <http:address location="http://211sandiego.clearviewportal.com/ClearViewWS/CustomServices/WS_211SanDiego.asmx"/>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>]]></con:content><con:type>http://schemas.xmlsoap.org/wsdl/</con:type></con:part></con:definitionCache><con:endpoints><con:endpoint>http://211sandiego.clearviewportal.com/ClearViewWS/CustomServices/WS_211SanDiego.asmx</con:endpoint></con:endpoints><con:operation id="9567c7ae-2c2a-432d-87d4-a78f7fcba5f3" isOneWay="false" action="http://ClearViewPortal.com/211SanDiego/GetLastCustomDataID" name="GetLastCustomDataID" bindingOperationName="GetLastCustomDataID" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="0752a2b9-9376-4d5a-9e80-cd98b11e9fa6" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://211sandiego.clearviewportal.com/ClearViewWS/CustomServices/WS_211SanDiego.asmx</con:endpoint><con:request><![CDATA[<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope" xmlns:san="http://ClearViewPortal.com/211SanDiego/">\r
+   <soap:Header>\r
+      <san:AuthHeader>\r
+         <!--Optional:-->\r
+         <san:CompanyName>sonoras imperio</san:CompanyName>\r
+         <!--Optional:-->\r
+         <san:WebKey>quae divum incedo</san:WebKey>\r
+      </san:AuthHeader>\r
+   </soap:Header>\r
+   <soap:Body>\r
+      <san:GetLastCustomDataID>\r
+         <!--Optional:-->\r
+         <san:ACDName>gero et</san:ACDName>\r
+      </san:GetLastCustomDataID>\r
+   </soap:Body>\r
+</soap:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://ClearViewPortal.com/211SanDiego/WS_211SanDiegoSoap/GetLastCustomDataIDRequest"/></con:call></con:operation><con:operation id="1ea2ebf1-99e9-44fb-bd8f-b12bacf14430" isOneWay="false" action="http://ClearViewPortal.com/211SanDiego/GetLastCustomDataImportDate" name="GetLastCustomDataImportDate" bindingOperationName="GetLastCustomDataImportDate" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="8500a94c-f26d-4af2-9284-d9611327d1ef" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://211sandiego.clearviewportal.com/ClearViewWS/CustomServices/WS_211SanDiego.asmx</con:endpoint><con:request><![CDATA[<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope" xmlns:san="http://ClearViewPortal.com/211SanDiego/">\r
+   <soap:Header>\r
+      <san:AuthHeader>\r
+         <!--Optional:-->\r
+         <san:CompanyName>sonoras imperio</san:CompanyName>\r
+         <!--Optional:-->\r
+         <san:WebKey>quae divum incedo</san:WebKey>\r
+      </san:AuthHeader>\r
+   </soap:Header>\r
+   <soap:Body>\r
+      <san:GetLastCustomDataImportDate>\r
+         <!--Optional:-->\r
+         <san:ACDName>gero et</san:ACDName>\r
+      </san:GetLastCustomDataImportDate>\r
+   </soap:Body>\r
+</soap:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://ClearViewPortal.com/211SanDiego/WS_211SanDiegoSoap/GetLastCustomDataImportDateRequest"/></con:call></con:operation><con:operation id="987ad716-0584-4ebf-9df9-6b584b4a2d4a" isOneWay="false" action="http://ClearViewPortal.com/211SanDiego/GetLastCustomTimeID" name="GetLastCustomTimeID" bindingOperationName="GetLastCustomTimeID" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="8c46ffd0-6f17-4f8f-bd4c-6e95465c5dd3" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://211sandiego.clearviewportal.com/ClearViewWS/CustomServices/WS_211SanDiego.asmx</con:endpoint><con:request><![CDATA[<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope" xmlns:san="http://ClearViewPortal.com/211SanDiego/">\r
+   <soap:Header>\r
+      <san:AuthHeader>\r
+         <!--Optional:-->\r
+         <san:CompanyName>sonoras imperio</san:CompanyName>\r
+         <!--Optional:-->\r
+         <san:WebKey>quae divum incedo</san:WebKey>\r
+      </san:AuthHeader>\r
+   </soap:Header>\r
+   <soap:Body>\r
+      <san:GetLastCustomTimeID>\r
+         <!--Optional:-->\r
+         <san:ACDName>gero et</san:ACDName>\r
+      </san:GetLastCustomTimeID>\r
+   </soap:Body>\r
+</soap:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://ClearViewPortal.com/211SanDiego/WS_211SanDiegoSoap/GetLastCustomTimeIDRequest"/></con:call></con:operation><con:operation id="ce653235-36ee-4ccd-b673-d44d15efc7ba" isOneWay="false" action="http://ClearViewPortal.com/211SanDiego/GetLastCustomTimeImportDate" name="GetLastCustomTimeImportDate" bindingOperationName="GetLastCustomTimeImportDate" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="8680ad0c-19ea-4e1e-8bce-7651b27dc87a" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://211sandiego.clearviewportal.com/ClearViewWS/CustomServices/WS_211SanDiego.asmx</con:endpoint><con:request><![CDATA[<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope" xmlns:san="http://ClearViewPortal.com/211SanDiego/">\r
+   <soap:Header>\r
+      <san:AuthHeader>\r
+         <!--Optional:-->\r
+         <san:CompanyName>sonoras imperio</san:CompanyName>\r
+         <!--Optional:-->\r
+         <san:WebKey>quae divum incedo</san:WebKey>\r
+      </san:AuthHeader>\r
+   </soap:Header>\r
+   <soap:Body>\r
+      <san:GetLastCustomTimeImportDate>\r
+         <!--Optional:-->\r
+         <san:ACDName>gero et</san:ACDName>\r
+      </san:GetLastCustomTimeImportDate>\r
+   </soap:Body>\r
+</soap:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://ClearViewPortal.com/211SanDiego/WS_211SanDiegoSoap/GetLastCustomTimeImportDateRequest"/></con:call></con:operation><con:operation id="f3f9572e-0671-4c65-a012-300bc35a98e3" isOneWay="false" action="http://ClearViewPortal.com/211SanDiego/ImportCustomData" name="ImportCustomData" bindingOperationName="ImportCustomData" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="aad13542-1c0f-45d9-8bb3-f77fb2241fa1" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://211sandiego.clearviewportal.com/ClearViewWS/CustomServices/WS_211SanDiego.asmx</con:endpoint><con:request><![CDATA[<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope" xmlns:san="http://ClearViewPortal.com/211SanDiego/">\r
+   <soap:Header>\r
+      <san:AuthHeader>\r
+         <!--Optional:-->\r
+         <san:CompanyName>ferant rapidi</san:CompanyName>\r
+         <!--Optional:-->\r
+         <san:WebKey>sceptra tenens</san:WebKey>\r
+      </san:AuthHeader>\r
+   </soap:Header>\r
+   <soap:Body>\r
+      <san:ImportCustomData>\r
+         <!--Optional:-->\r
+         <san:CustomDataCollection>\r
+            <!--Zero or more repetitions:-->\r
+            <san:CustomData>\r
+               <!--Optional:-->\r
+               <san:ACDName>gero et</san:ACDName>\r
+               <san:CallDate>2013-11-23T06:44:07</san:CallDate>\r
+               <san:DataID>10</san:DataID>\r
+               <san:RelatedCallID>10</san:RelatedCallID>\r
+               <san:EmpGroup1ID>3</san:EmpGroup1ID>\r
+               <san:EmpGroup2ID>3</san:EmpGroup2ID>\r
+               <san:EmpGroup3ID>3</san:EmpGroup3ID>\r
+               <san:EmpGroup4ID>3</san:EmpGroup4ID>\r
+               <san:EmpGroup5ID>3</san:EmpGroup5ID>\r
+               <san:RecGroup1ID>3</san:RecGroup1ID>\r
+               <san:RecGroup2ID>3</san:RecGroup2ID>\r
+               <san:RecGroup3ID>3</san:RecGroup3ID>\r
+               <san:RecGroup4ID>3</san:RecGroup4ID>\r
+               <san:RecGroup5ID>3</san:RecGroup5ID>\r
+               <!--Optional:-->\r
+               <san:DataType>ventos tempestatesque</san:DataType>\r
+               <!--Optional:-->\r
+               <san:DataCategory>temperat iras</san:DataCategory>\r
+               <!--Optional:-->\r
+               <san:DataClass>turbine corripuit</san:DataClass>\r
+               <!--Optional:-->\r
+               <san:DataClass2>regemque dedit</san:DataClass2>\r
+               <!--Optional:-->\r
+               <san:DataClass3>fremunt celsa</san:DataClass3>\r
+               <san:DataValue>1.5E2</san:DataValue>\r
+            </san:CustomData>\r
+         </san:CustomDataCollection>\r
+      </san:ImportCustomData>\r
+   </soap:Body>\r
+</soap:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://ClearViewPortal.com/211SanDiego/WS_211SanDiegoSoap/ImportCustomDataRequest"/></con:call></con:operation><con:operation id="9217e477-952a-4e44-bb97-fab8af496838" isOneWay="false" action="http://ClearViewPortal.com/211SanDiego/ImportCustomTime" name="ImportCustomTime" bindingOperationName="ImportCustomTime" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="5fb5beeb-f546-43fe-85a4-b2a798d307f1" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://211sandiego.clearviewportal.com/ClearViewWS/CustomServices/WS_211SanDiego.asmx</con:endpoint><con:request><![CDATA[<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope" xmlns:san="http://ClearViewPortal.com/211SanDiego/">\r
+   <soap:Header>\r
+      <san:AuthHeader>\r
+         <!--Optional:-->\r
+         <san:CompanyName>et carcere</san:CompanyName>\r
+         <!--Optional:-->\r
+         <san:WebKey>iovis rapidum iaculata</san:WebKey>\r
+      </san:AuthHeader>\r
+   </soap:Header>\r
+   <soap:Body>\r
+      <san:ImportCustomTime>\r
+         <!--Optional:-->\r
+         <san:CustomTimeCollection>\r
+            <!--Zero or more repetitions:-->\r
+            <san:CustomTime>\r
+               <!--Optional:-->\r
+               <san:ACDName>gero et</san:ACDName>\r
+               <san:StartDate>2013-11-23T06:44:07</san:StartDate>\r
+               <san:EndDate>2014-06-09T08:15:04-07:00</san:EndDate>\r
+               <san:SessionID>10</san:SessionID>\r
+               <san:RelatedCallID>10</san:RelatedCallID>\r
+               <san:EmpGroup1ID>3</san:EmpGroup1ID>\r
+               <san:EmpGroup2ID>3</san:EmpGroup2ID>\r
+               <san:EmpGroup3ID>3</san:EmpGroup3ID>\r
+               <san:EmpGroup4ID>3</san:EmpGroup4ID>\r
+               <san:EmpGroup5ID>3</san:EmpGroup5ID>\r
+               <san:RecGroup1ID>3</san:RecGroup1ID>\r
+               <san:RecGroup2ID>3</san:RecGroup2ID>\r
+               <san:RecGroup3ID>3</san:RecGroup3ID>\r
+               <san:RecGroup4ID>3</san:RecGroup4ID>\r
+               <san:RecGroup5ID>3</san:RecGroup5ID>\r
+               <!--Optional:-->\r
+               <san:TimeType>per auras</san:TimeType>\r
+               <!--Optional:-->\r
+               <san:TimeCategory>circum claustra</san:TimeCategory>\r
+               <!--Optional:-->\r
+               <san:TimeClass>nimborum in</san:TimeClass>\r
+               <!--Optional:-->\r
+               <san:TimeClass2>foedere certo</san:TimeClass2>\r
+               <!--Optional:-->\r
+               <san:TimeClass3>profundum quippe ferant</san:TimeClass3>\r
+            </san:CustomTime>\r
+         </san:CustomTimeCollection>\r
+      </san:ImportCustomTime>\r
+   </soap:Body>\r
+</soap:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://ClearViewPortal.com/211SanDiego/WS_211SanDiegoSoap/ImportCustomTimeRequest"/></con:call></con:operation><con:operation id="8bd9dc17-b006-4004-a658-64931d313fbc" isOneWay="false" action="http://ClearViewPortal.com/211SanDiego/TestConnection" name="TestConnection" bindingOperationName="TestConnection" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="e4f3ac5c-7a07-46d3-874e-88509a1e08ba" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://211sandiego.clearviewportal.com/ClearViewWS/CustomServices/WS_211SanDiego.asmx</con:endpoint><con:request><![CDATA[<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope" xmlns:san="http://ClearViewPortal.com/211SanDiego/">\r
+   <soap:Header>\r
+      <san:AuthHeader>\r
+         <!--Optional:-->\r
+         <san:CompanyName>gero et</san:CompanyName>\r
+         <!--Optional:-->\r
+         <san:WebKey>sonoras imperio</san:WebKey>\r
+      </san:AuthHeader>\r
+   </soap:Header>\r
+   <soap:Body>\r
+      <san:TestConnection/>\r
+   </soap:Body>\r
+</soap:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://ClearViewPortal.com/211SanDiego/WS_211SanDiegoSoap/TestConnectionRequest"/></con:call></con:operation></con:interface><con:interface xsi:type="con:WsdlInterface" id="3ddeb180-f452-48d3-9f60-67444afdcb91" wsaVersion="NONE" name="WS_211SanDiegoSoap" type="wsdl" bindingName="{http://ClearViewPortal.com/211SanDiego/}WS_211SanDiegoSoap" soapVersion="1_1" anonymous="optional" definition="http://211sandiego.clearviewportal.com/ClearViewWS/CustomServices/WS_211SanDiego.asmx?WSDL" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.actions.iface.tools.wsimport.WSImportAction@values-local"><![CDATA[<xml-fragment xmlns:con="http://eviware.com/soapui/config">
+  <con:entry key="wsdlLocation" value=""/>
+  <con:entry key="Use cached WSDL" value="false"/>
+  <con:entry key="HTTP Proxy" value=""/>
+  <con:entry key="WSDL" value="http://211sandiego.clearviewportal.com/ClearViewWS/CustomServices/WS_211SanDiego.asmx?WSDL"/>
+  <con:entry key="Catalog" value=""/>
+  <con:entry key="Source Directory" value="C:\Source\ClearView"/>
+  <con:entry key="Package" value="src.main.java"/>
+  <con:entry key="Keep" value="false"/>
+  <con:entry key="Target Directory" value=""/>
+  <con:entry key="Tool Args" value=""/>
+  <con:entry key="Binding files" value=""/>
+</xml-fragment>]]></con:setting></con:settings><con:definitionCache type="TEXT" rootPart="http://211sandiego.clearviewportal.com/ClearViewWS/CustomServices/WS_211SanDiego.asmx?WSDL"><con:part><con:url>http://211sandiego.clearviewportal.com/ClearViewWS/CustomServices/WS_211SanDiego.asmx?WSDL</con:url><con:content><![CDATA[<wsdl:definitions targetNamespace="http://ClearViewPortal.com/211SanDiego/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://ClearViewPortal.com/211SanDiego/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://ClearViewPortal.com/211SanDiego/">
+      <s:element name="TestConnection">
+        <s:complexType/>
+      </s:element>
+      <s:element name="TestConnectionResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="TestConnectionResult" type="s:boolean"/>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AuthHeader" type="tns:AuthHeader"/>
+      <s:complexType name="AuthHeader">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="CompanyName" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="WebKey" type="s:string"/>
+        </s:sequence>
+        <s:anyAttribute/>
+      </s:complexType>
+      <s:element name="GetLastCustomDataImportDate">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ACDName" type="s:string"/>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetLastCustomDataImportDateResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="GetLastCustomDataImportDateResult" type="s:dateTime"/>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetLastCustomDataID">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ACDName" type="s:string"/>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetLastCustomDataIDResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="GetLastCustomDataIDResult" type="s:long"/>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ImportCustomData">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="CustomDataCollection" type="tns:ArrayOfCustomData"/>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfCustomData">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="CustomData" nillable="true" type="tns:CustomData"/>
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="CustomData">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="ACDName" type="s:string"/>
+          <s:element minOccurs="1" maxOccurs="1" name="CallDate" type="s:dateTime"/>
+          <s:element minOccurs="1" maxOccurs="1" name="DataID" type="s:long"/>
+          <s:element minOccurs="1" maxOccurs="1" name="RelatedCallID" type="s:long"/>
+          <s:element minOccurs="1" maxOccurs="1" name="EmpGroup1ID" type="s:int"/>
+          <s:element minOccurs="1" maxOccurs="1" name="EmpGroup2ID" type="s:int"/>
+          <s:element minOccurs="1" maxOccurs="1" name="EmpGroup3ID" type="s:int"/>
+          <s:element minOccurs="1" maxOccurs="1" name="EmpGroup4ID" type="s:int"/>
+          <s:element minOccurs="1" maxOccurs="1" name="EmpGroup5ID" type="s:int"/>
+          <s:element minOccurs="1" maxOccurs="1" name="RecGroup1ID" type="s:int"/>
+          <s:element minOccurs="1" maxOccurs="1" name="RecGroup2ID" type="s:int"/>
+          <s:element minOccurs="1" maxOccurs="1" name="RecGroup3ID" type="s:int"/>
+          <s:element minOccurs="1" maxOccurs="1" name="RecGroup4ID" type="s:int"/>
+          <s:element minOccurs="1" maxOccurs="1" name="RecGroup5ID" type="s:int"/>
+          <s:element minOccurs="0" maxOccurs="1" name="DataType" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="DataCategory" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="DataClass" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="DataClass2" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="DataClass3" type="s:string"/>
+          <s:element minOccurs="1" maxOccurs="1" name="DataValue" type="s:float"/>
+        </s:sequence>
+      </s:complexType>
+      <s:element name="ImportCustomDataResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ImportCustomDataResult" type="tns:ArrayOfErrorNotifications"/>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfErrorNotifications">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="ErrorNotifications" nillable="true" type="tns:ErrorNotifications"/>
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ErrorNotifications">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="DataID" type="s:long"/>
+          <s:element minOccurs="0" maxOccurs="1" name="FailureReason" type="s:string"/>
+        </s:sequence>
+      </s:complexType>
+      <s:element name="GetLastCustomTimeImportDate">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ACDName" type="s:string"/>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetLastCustomTimeImportDateResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="GetLastCustomTimeImportDateResult" type="s:dateTime"/>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetLastCustomTimeID">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ACDName" type="s:string"/>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetLastCustomTimeIDResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="GetLastCustomTimeIDResult" type="s:long"/>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ImportCustomTime">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="CustomTimeCollection" type="tns:ArrayOfCustomTime"/>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfCustomTime">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="CustomTime" nillable="true" type="tns:CustomTime"/>
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="CustomTime">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="ACDName" type="s:string"/>
+          <s:element minOccurs="1" maxOccurs="1" name="StartDate" type="s:dateTime"/>
+          <s:element minOccurs="1" maxOccurs="1" name="EndDate" type="s:dateTime"/>
+          <s:element minOccurs="1" maxOccurs="1" name="SessionID" type="s:long"/>
+          <s:element minOccurs="1" maxOccurs="1" name="RelatedCallID" type="s:long"/>
+          <s:element minOccurs="1" maxOccurs="1" name="EmpGroup1ID" type="s:int"/>
+          <s:element minOccurs="1" maxOccurs="1" name="EmpGroup2ID" type="s:int"/>
+          <s:element minOccurs="1" maxOccurs="1" name="EmpGroup3ID" type="s:int"/>
+          <s:element minOccurs="1" maxOccurs="1" name="EmpGroup4ID" type="s:int"/>
+          <s:element minOccurs="1" maxOccurs="1" name="EmpGroup5ID" type="s:int"/>
+          <s:element minOccurs="1" maxOccurs="1" name="RecGroup1ID" type="s:int"/>
+          <s:element minOccurs="1" maxOccurs="1" name="RecGroup2ID" type="s:int"/>
+          <s:element minOccurs="1" maxOccurs="1" name="RecGroup3ID" type="s:int"/>
+          <s:element minOccurs="1" maxOccurs="1" name="RecGroup4ID" type="s:int"/>
+          <s:element minOccurs="1" maxOccurs="1" name="RecGroup5ID" type="s:int"/>
+          <s:element minOccurs="0" maxOccurs="1" name="TimeType" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="TimeCategory" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="TimeClass" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="TimeClass2" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="TimeClass3" type="s:string"/>
+        </s:sequence>
+      </s:complexType>
+      <s:element name="ImportCustomTimeResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ImportCustomTimeResult" type="tns:ArrayOfErrorNotifications"/>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="boolean" type="s:boolean"/>
+      <s:element name="dateTime" type="s:dateTime"/>
+      <s:element name="long" type="s:long"/>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="TestConnectionSoapIn">
+    <wsdl:part name="parameters" element="tns:TestConnection"/>
+  </wsdl:message>
+  <wsdl:message name="TestConnectionSoapOut">
+    <wsdl:part name="parameters" element="tns:TestConnectionResponse"/>
+  </wsdl:message>
+  <wsdl:message name="TestConnectionAuthHeader">
+    <wsdl:part name="AuthHeader" element="tns:AuthHeader"/>
+  </wsdl:message>
+  <wsdl:message name="GetLastCustomDataImportDateSoapIn">
+    <wsdl:part name="parameters" element="tns:GetLastCustomDataImportDate"/>
+  </wsdl:message>
+  <wsdl:message name="GetLastCustomDataImportDateSoapOut">
+    <wsdl:part name="parameters" element="tns:GetLastCustomDataImportDateResponse"/>
+  </wsdl:message>
+  <wsdl:message name="GetLastCustomDataImportDateAuthHeader">
+    <wsdl:part name="AuthHeader" element="tns:AuthHeader"/>
+  </wsdl:message>
+  <wsdl:message name="GetLastCustomDataIDSoapIn">
+    <wsdl:part name="parameters" element="tns:GetLastCustomDataID"/>
+  </wsdl:message>
+  <wsdl:message name="GetLastCustomDataIDSoapOut">
+    <wsdl:part name="parameters" element="tns:GetLastCustomDataIDResponse"/>
+  </wsdl:message>
+  <wsdl:message name="GetLastCustomDataIDAuthHeader">
+    <wsdl:part name="AuthHeader" element="tns:AuthHeader"/>
+  </wsdl:message>
+  <wsdl:message name="ImportCustomDataSoapIn">
+    <wsdl:part name="parameters" element="tns:ImportCustomData"/>
+  </wsdl:message>
+  <wsdl:message name="ImportCustomDataSoapOut">
+    <wsdl:part name="parameters" element="tns:ImportCustomDataResponse"/>
+  </wsdl:message>
+  <wsdl:message name="ImportCustomDataAuthHeader">
+    <wsdl:part name="AuthHeader" element="tns:AuthHeader"/>
+  </wsdl:message>
+  <wsdl:message name="GetLastCustomTimeImportDateSoapIn">
+    <wsdl:part name="parameters" element="tns:GetLastCustomTimeImportDate"/>
+  </wsdl:message>
+  <wsdl:message name="GetLastCustomTimeImportDateSoapOut">
+    <wsdl:part name="parameters" element="tns:GetLastCustomTimeImportDateResponse"/>
+  </wsdl:message>
+  <wsdl:message name="GetLastCustomTimeImportDateAuthHeader">
+    <wsdl:part name="AuthHeader" element="tns:AuthHeader"/>
+  </wsdl:message>
+  <wsdl:message name="GetLastCustomTimeIDSoapIn">
+    <wsdl:part name="parameters" element="tns:GetLastCustomTimeID"/>
+  </wsdl:message>
+  <wsdl:message name="GetLastCustomTimeIDSoapOut">
+    <wsdl:part name="parameters" element="tns:GetLastCustomTimeIDResponse"/>
+  </wsdl:message>
+  <wsdl:message name="GetLastCustomTimeIDAuthHeader">
+    <wsdl:part name="AuthHeader" element="tns:AuthHeader"/>
+  </wsdl:message>
+  <wsdl:message name="ImportCustomTimeSoapIn">
+    <wsdl:part name="parameters" element="tns:ImportCustomTime"/>
+  </wsdl:message>
+  <wsdl:message name="ImportCustomTimeSoapOut">
+    <wsdl:part name="parameters" element="tns:ImportCustomTimeResponse"/>
+  </wsdl:message>
+  <wsdl:message name="ImportCustomTimeAuthHeader">
+    <wsdl:part name="AuthHeader" element="tns:AuthHeader"/>
+  </wsdl:message>
+  <wsdl:message name="TestConnectionHttpGetIn"/>
+  <wsdl:message name="TestConnectionHttpGetOut">
+    <wsdl:part name="Body" element="tns:boolean"/>
+  </wsdl:message>
+  <wsdl:message name="GetLastCustomDataImportDateHttpGetIn">
+    <wsdl:part name="ACDName" type="s:string"/>
+  </wsdl:message>
+  <wsdl:message name="GetLastCustomDataImportDateHttpGetOut">
+    <wsdl:part name="Body" element="tns:dateTime"/>
+  </wsdl:message>
+  <wsdl:message name="GetLastCustomDataIDHttpGetIn">
+    <wsdl:part name="ACDName" type="s:string"/>
+  </wsdl:message>
+  <wsdl:message name="GetLastCustomDataIDHttpGetOut">
+    <wsdl:part name="Body" element="tns:long"/>
+  </wsdl:message>
+  <wsdl:message name="GetLastCustomTimeImportDateHttpGetIn">
+    <wsdl:part name="ACDName" type="s:string"/>
+  </wsdl:message>
+  <wsdl:message name="GetLastCustomTimeImportDateHttpGetOut">
+    <wsdl:part name="Body" element="tns:dateTime"/>
+  </wsdl:message>
+  <wsdl:message name="GetLastCustomTimeIDHttpGetIn">
+    <wsdl:part name="ACDName" type="s:string"/>
+  </wsdl:message>
+  <wsdl:message name="GetLastCustomTimeIDHttpGetOut">
+    <wsdl:part name="Body" element="tns:long"/>
+  </wsdl:message>
+  <wsdl:portType name="WS_211SanDiegoSoap">
+    <wsdl:operation name="TestConnection">
+      <wsdl:documentation>Test a connection to the 211 San Diego Web Service</wsdl:documentation>
+      <wsdl:input message="tns:TestConnectionSoapIn"/>
+      <wsdl:output message="tns:TestConnectionSoapOut"/>
+    </wsdl:operation>
+    <wsdl:operation name="GetLastCustomDataImportDate">
+      <wsdl:documentation>Get the last day imported.  Returns '1/1/1900' if no custom data has been imported.</wsdl:documentation>
+      <wsdl:input message="tns:GetLastCustomDataImportDateSoapIn"/>
+      <wsdl:output message="tns:GetLastCustomDataImportDateSoapOut"/>
+    </wsdl:operation>
+    <wsdl:operation name="GetLastCustomDataID">
+      <wsdl:documentation>Get the last custom data id imported.  Returns 0 if no custom data has been imported.</wsdl:documentation>
+      <wsdl:input message="tns:GetLastCustomDataIDSoapIn"/>
+      <wsdl:output message="tns:GetLastCustomDataIDSoapOut"/>
+    </wsdl:operation>
+    <wsdl:operation name="ImportCustomData">
+      <wsdl:documentation>Import custom data into ClearView</wsdl:documentation>
+      <wsdl:input message="tns:ImportCustomDataSoapIn"/>
+      <wsdl:output message="tns:ImportCustomDataSoapOut"/>
+    </wsdl:operation>
+    <wsdl:operation name="GetLastCustomTimeImportDate">
+      <wsdl:documentation>Get the last day imported.  Returns '1/1/1900' if no custom time has been imported.</wsdl:documentation>
+      <wsdl:input message="tns:GetLastCustomTimeImportDateSoapIn"/>
+      <wsdl:output message="tns:GetLastCustomTimeImportDateSoapOut"/>
+    </wsdl:operation>
+    <wsdl:operation name="GetLastCustomTimeID">
+      <wsdl:documentation>Get the last custom time id imported.  Returns 0 if no custom data has been imported.</wsdl:documentation>
+      <wsdl:input message="tns:GetLastCustomTimeIDSoapIn"/>
+      <wsdl:output message="tns:GetLastCustomTimeIDSoapOut"/>
+    </wsdl:operation>
+    <wsdl:operation name="ImportCustomTime">
+      <wsdl:documentation>Import custom time into ClearView</wsdl:documentation>
+      <wsdl:input message="tns:ImportCustomTimeSoapIn"/>
+      <wsdl:output message="tns:ImportCustomTimeSoapOut"/>
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:portType name="WS_211SanDiegoHttpGet">
+    <wsdl:operation name="TestConnection">
+      <wsdl:documentation>Test a connection to the 211 San Diego Web Service</wsdl:documentation>
+      <wsdl:input message="tns:TestConnectionHttpGetIn"/>
+      <wsdl:output message="tns:TestConnectionHttpGetOut"/>
+    </wsdl:operation>
+    <wsdl:operation name="GetLastCustomDataImportDate">
+      <wsdl:documentation>Get the last day imported.  Returns '1/1/1900' if no custom data has been imported.</wsdl:documentation>
+      <wsdl:input message="tns:GetLastCustomDataImportDateHttpGetIn"/>
+      <wsdl:output message="tns:GetLastCustomDataImportDateHttpGetOut"/>
+    </wsdl:operation>
+    <wsdl:operation name="GetLastCustomDataID">
+      <wsdl:documentation>Get the last custom data id imported.  Returns 0 if no custom data has been imported.</wsdl:documentation>
+      <wsdl:input message="tns:GetLastCustomDataIDHttpGetIn"/>
+      <wsdl:output message="tns:GetLastCustomDataIDHttpGetOut"/>
+    </wsdl:operation>
+    <wsdl:operation name="GetLastCustomTimeImportDate">
+      <wsdl:documentation>Get the last day imported.  Returns '1/1/1900' if no custom time has been imported.</wsdl:documentation>
+      <wsdl:input message="tns:GetLastCustomTimeImportDateHttpGetIn"/>
+      <wsdl:output message="tns:GetLastCustomTimeImportDateHttpGetOut"/>
+    </wsdl:operation>
+    <wsdl:operation name="GetLastCustomTimeID">
+      <wsdl:documentation>Get the last custom time id imported.  Returns 0 if no custom data has been imported.</wsdl:documentation>
+      <wsdl:input message="tns:GetLastCustomTimeIDHttpGetIn"/>
+      <wsdl:output message="tns:GetLastCustomTimeIDHttpGetOut"/>
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="WS_211SanDiegoSoap" type="tns:WS_211SanDiegoSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http"/>
+    <wsdl:operation name="TestConnection">
+      <soap:operation soapAction="http://ClearViewPortal.com/211SanDiego/TestConnection" style="document"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+        <soap:header message="tns:TestConnectionAuthHeader" part="AuthHeader" use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetLastCustomDataImportDate">
+      <soap:operation soapAction="http://ClearViewPortal.com/211SanDiego/GetLastCustomDataImportDate" style="document"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+        <soap:header message="tns:GetLastCustomDataImportDateAuthHeader" part="AuthHeader" use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetLastCustomDataID">
+      <soap:operation soapAction="http://ClearViewPortal.com/211SanDiego/GetLastCustomDataID" style="document"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+        <soap:header message="tns:GetLastCustomDataIDAuthHeader" part="AuthHeader" use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ImportCustomData">
+      <soap:operation soapAction="http://ClearViewPortal.com/211SanDiego/ImportCustomData" style="document"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+        <soap:header message="tns:ImportCustomDataAuthHeader" part="AuthHeader" use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetLastCustomTimeImportDate">
+      <soap:operation soapAction="http://ClearViewPortal.com/211SanDiego/GetLastCustomTimeImportDate" style="document"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+        <soap:header message="tns:GetLastCustomTimeImportDateAuthHeader" part="AuthHeader" use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetLastCustomTimeID">
+      <soap:operation soapAction="http://ClearViewPortal.com/211SanDiego/GetLastCustomTimeID" style="document"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+        <soap:header message="tns:GetLastCustomTimeIDAuthHeader" part="AuthHeader" use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ImportCustomTime">
+      <soap:operation soapAction="http://ClearViewPortal.com/211SanDiego/ImportCustomTime" style="document"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+        <soap:header message="tns:ImportCustomTimeAuthHeader" part="AuthHeader" use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="WS_211SanDiegoSoap12" type="tns:WS_211SanDiegoSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http"/>
+    <wsdl:operation name="TestConnection">
+      <soap12:operation soapAction="http://ClearViewPortal.com/211SanDiego/TestConnection" style="document"/>
+      <wsdl:input>
+        <soap12:body use="literal"/>
+        <soap12:header message="tns:TestConnectionAuthHeader" part="AuthHeader" use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetLastCustomDataImportDate">
+      <soap12:operation soapAction="http://ClearViewPortal.com/211SanDiego/GetLastCustomDataImportDate" style="document"/>
+      <wsdl:input>
+        <soap12:body use="literal"/>
+        <soap12:header message="tns:GetLastCustomDataImportDateAuthHeader" part="AuthHeader" use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetLastCustomDataID">
+      <soap12:operation soapAction="http://ClearViewPortal.com/211SanDiego/GetLastCustomDataID" style="document"/>
+      <wsdl:input>
+        <soap12:body use="literal"/>
+        <soap12:header message="tns:GetLastCustomDataIDAuthHeader" part="AuthHeader" use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ImportCustomData">
+      <soap12:operation soapAction="http://ClearViewPortal.com/211SanDiego/ImportCustomData" style="document"/>
+      <wsdl:input>
+        <soap12:body use="literal"/>
+        <soap12:header message="tns:ImportCustomDataAuthHeader" part="AuthHeader" use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetLastCustomTimeImportDate">
+      <soap12:operation soapAction="http://ClearViewPortal.com/211SanDiego/GetLastCustomTimeImportDate" style="document"/>
+      <wsdl:input>
+        <soap12:body use="literal"/>
+        <soap12:header message="tns:GetLastCustomTimeImportDateAuthHeader" part="AuthHeader" use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetLastCustomTimeID">
+      <soap12:operation soapAction="http://ClearViewPortal.com/211SanDiego/GetLastCustomTimeID" style="document"/>
+      <wsdl:input>
+        <soap12:body use="literal"/>
+        <soap12:header message="tns:GetLastCustomTimeIDAuthHeader" part="AuthHeader" use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ImportCustomTime">
+      <soap12:operation soapAction="http://ClearViewPortal.com/211SanDiego/ImportCustomTime" style="document"/>
+      <wsdl:input>
+        <soap12:body use="literal"/>
+        <soap12:header message="tns:ImportCustomTimeAuthHeader" part="AuthHeader" use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="WS_211SanDiegoHttpGet" type="tns:WS_211SanDiegoHttpGet">
+    <http:binding verb="GET"/>
+    <wsdl:operation name="TestConnection">
+      <http:operation location="/TestConnection"/>
+      <wsdl:input>
+        <http:urlEncoded/>
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetLastCustomDataImportDate">
+      <http:operation location="/GetLastCustomDataImportDate"/>
+      <wsdl:input>
+        <http:urlEncoded/>
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetLastCustomDataID">
+      <http:operation location="/GetLastCustomDataID"/>
+      <wsdl:input>
+        <http:urlEncoded/>
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetLastCustomTimeImportDate">
+      <http:operation location="/GetLastCustomTimeImportDate"/>
+      <wsdl:input>
+        <http:urlEncoded/>
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetLastCustomTimeID">
+      <http:operation location="/GetLastCustomTimeID"/>
+      <wsdl:input>
+        <http:urlEncoded/>
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body"/>
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="WS_211SanDiego">
+    <wsdl:port name="WS_211SanDiegoSoap" binding="tns:WS_211SanDiegoSoap">
+      <soap:address location="http://211sandiego.clearviewportal.com/ClearViewWS/CustomServices/WS_211SanDiego.asmx"/>
+    </wsdl:port>
+    <wsdl:port name="WS_211SanDiegoSoap12" binding="tns:WS_211SanDiegoSoap12">
+      <soap12:address location="http://211sandiego.clearviewportal.com/ClearViewWS/CustomServices/WS_211SanDiego.asmx"/>
+    </wsdl:port>
+    <wsdl:port name="WS_211SanDiegoHttpGet" binding="tns:WS_211SanDiegoHttpGet">
+      <http:address location="http://211sandiego.clearviewportal.com/ClearViewWS/CustomServices/WS_211SanDiego.asmx"/>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>]]></con:content><con:type>http://schemas.xmlsoap.org/wsdl/</con:type></con:part></con:definitionCache><con:endpoints><con:endpoint>http://211sandiego.clearviewportal.com/ClearViewWS/CustomServices/WS_211SanDiego.asmx</con:endpoint></con:endpoints><con:operation id="265583c7-1a74-4c8c-a0d3-1200ddd49124" isOneWay="false" action="http://ClearViewPortal.com/211SanDiego/GetLastCustomDataID" name="GetLastCustomDataID" bindingOperationName="GetLastCustomDataID" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="c0cd79a1-4968-4d5c-88d6-2f16cd09ba22" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://211sandiego.clearviewportal.com/ClearViewWS/CustomServices/WS_211SanDiego.asmx</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:san="http://ClearViewPortal.com/211SanDiego/">\r
+   <soapenv:Header>\r
+      <san:AuthHeader>\r
+         <!--Optional:-->\r
+         <san:CompanyName>sonoras imperio</san:CompanyName>\r
+         <!--Optional:-->\r
+         <san:WebKey>quae divum incedo</san:WebKey>\r
+      </san:AuthHeader>\r
+   </soapenv:Header>\r
+   <soapenv:Body>\r
+      <san:GetLastCustomDataID>\r
+         <!--Optional:-->\r
+         <san:ACDName>gero et</san:ACDName>\r
+      </san:GetLastCustomDataID>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://ClearViewPortal.com/211SanDiego/GetLastCustomDataID"/></con:call></con:operation><con:operation id="6d034eb8-4a4d-4502-93ca-0fe79262bd17" isOneWay="false" action="http://ClearViewPortal.com/211SanDiego/GetLastCustomDataImportDate" name="GetLastCustomDataImportDate" bindingOperationName="GetLastCustomDataImportDate" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="f1a072a4-3c50-413b-b334-f40210ec8bf9" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://211sandiego.clearviewportal.com/ClearViewWS/CustomServices/WS_211SanDiego.asmx</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:san="http://ClearViewPortal.com/211SanDiego/">\r
+   <soapenv:Header>\r
+      <san:AuthHeader>\r
+         <!--Optional:-->\r
+         <san:CompanyName>sonoras imperio</san:CompanyName>\r
+         <!--Optional:-->\r
+         <san:WebKey>quae divum incedo</san:WebKey>\r
+      </san:AuthHeader>\r
+   </soapenv:Header>\r
+   <soapenv:Body>\r
+      <san:GetLastCustomDataImportDate>\r
+         <!--Optional:-->\r
+         <san:ACDName>gero et</san:ACDName>\r
+      </san:GetLastCustomDataImportDate>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://ClearViewPortal.com/211SanDiego/GetLastCustomDataImportDate"/></con:call></con:operation><con:operation id="7487c169-8ff8-40d0-a97c-f3bfda7c6cdd" isOneWay="false" action="http://ClearViewPortal.com/211SanDiego/GetLastCustomTimeID" name="GetLastCustomTimeID" bindingOperationName="GetLastCustomTimeID" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="bfedd266-2ec2-48f0-8104-1dc436a283f2" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://211sandiego.clearviewportal.com/ClearViewWS/CustomServices/WS_211SanDiego.asmx</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:san="http://ClearViewPortal.com/211SanDiego/">\r
+   <soapenv:Header>\r
+      <san:AuthHeader>\r
+         <!--Optional:-->\r
+         <san:CompanyName>sonoras imperio</san:CompanyName>\r
+         <!--Optional:-->\r
+         <san:WebKey>quae divum incedo</san:WebKey>\r
+      </san:AuthHeader>\r
+   </soapenv:Header>\r
+   <soapenv:Body>\r
+      <san:GetLastCustomTimeID>\r
+         <!--Optional:-->\r
+         <san:ACDName>gero et</san:ACDName>\r
+      </san:GetLastCustomTimeID>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://ClearViewPortal.com/211SanDiego/GetLastCustomTimeID"/></con:call></con:operation><con:operation id="924e448a-3cf9-4ff7-af86-c1168f6a90b3" isOneWay="false" action="http://ClearViewPortal.com/211SanDiego/GetLastCustomTimeImportDate" name="GetLastCustomTimeImportDate" bindingOperationName="GetLastCustomTimeImportDate" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="74dca1a4-e0ef-466e-a97d-047013b580ed" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://211sandiego.clearviewportal.com/ClearViewWS/CustomServices/WS_211SanDiego.asmx</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:san="http://ClearViewPortal.com/211SanDiego/">\r
+   <soapenv:Header>\r
+      <san:AuthHeader>\r
+         <!--Optional:-->\r
+         <san:CompanyName>sonoras imperio</san:CompanyName>\r
+         <!--Optional:-->\r
+         <san:WebKey>quae divum incedo</san:WebKey>\r
+      </san:AuthHeader>\r
+   </soapenv:Header>\r
+   <soapenv:Body>\r
+      <san:GetLastCustomTimeImportDate>\r
+         <!--Optional:-->\r
+         <san:ACDName>gero et</san:ACDName>\r
+      </san:GetLastCustomTimeImportDate>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://ClearViewPortal.com/211SanDiego/GetLastCustomTimeImportDate"/></con:call></con:operation><con:operation id="ae46e0bb-c37a-446c-bce3-77dc22db61b4" isOneWay="false" action="http://ClearViewPortal.com/211SanDiego/ImportCustomData" name="ImportCustomData" bindingOperationName="ImportCustomData" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="7bd6c9b3-b713-4e87-92d1-f79340509f51" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://211sandiego.clearviewportal.com/ClearViewWS/CustomServices/WS_211SanDiego.asmx</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:san="http://ClearViewPortal.com/211SanDiego/">\r
+   <soapenv:Header>\r
+      <san:AuthHeader>\r
+         <!--Optional:-->\r
+         <san:CompanyName>ferant rapidi</san:CompanyName>\r
+         <!--Optional:-->\r
+         <san:WebKey>sceptra tenens</san:WebKey>\r
+      </san:AuthHeader>\r
+   </soapenv:Header>\r
+   <soapenv:Body>\r
+      <san:ImportCustomData>\r
+         <!--Optional:-->\r
+         <san:CustomDataCollection>\r
+            <!--Zero or more repetitions:-->\r
+            <san:CustomData>\r
+               <!--Optional:-->\r
+               <san:ACDName>gero et</san:ACDName>\r
+               <san:CallDate>2013-11-23T06:44:07</san:CallDate>\r
+               <san:DataID>10</san:DataID>\r
+               <san:RelatedCallID>10</san:RelatedCallID>\r
+               <san:EmpGroup1ID>3</san:EmpGroup1ID>\r
+               <san:EmpGroup2ID>3</san:EmpGroup2ID>\r
+               <san:EmpGroup3ID>3</san:EmpGroup3ID>\r
+               <san:EmpGroup4ID>3</san:EmpGroup4ID>\r
+               <san:EmpGroup5ID>3</san:EmpGroup5ID>\r
+               <san:RecGroup1ID>3</san:RecGroup1ID>\r
+               <san:RecGroup2ID>3</san:RecGroup2ID>\r
+               <san:RecGroup3ID>3</san:RecGroup3ID>\r
+               <san:RecGroup4ID>3</san:RecGroup4ID>\r
+               <san:RecGroup5ID>3</san:RecGroup5ID>\r
+               <!--Optional:-->\r
+               <san:DataType>ventos tempestatesque</san:DataType>\r
+               <!--Optional:-->\r
+               <san:DataCategory>temperat iras</san:DataCategory>\r
+               <!--Optional:-->\r
+               <san:DataClass>turbine corripuit</san:DataClass>\r
+               <!--Optional:-->\r
+               <san:DataClass2>regemque dedit</san:DataClass2>\r
+               <!--Optional:-->\r
+               <san:DataClass3>fremunt celsa</san:DataClass3>\r
+               <san:DataValue>1.5E2</san:DataValue>\r
+            </san:CustomData>\r
+         </san:CustomDataCollection>\r
+      </san:ImportCustomData>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://ClearViewPortal.com/211SanDiego/ImportCustomData"/></con:call></con:operation><con:operation id="183c9629-f897-4a88-8b39-36708c04cb3c" isOneWay="false" action="http://ClearViewPortal.com/211SanDiego/ImportCustomTime" name="ImportCustomTime" bindingOperationName="ImportCustomTime" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="0d96ad8a-76e5-4f8f-952b-15bffa440da9" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://211sandiego.clearviewportal.com/ClearViewWS/CustomServices/WS_211SanDiego.asmx</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:san="http://ClearViewPortal.com/211SanDiego/">\r
+   <soapenv:Header>\r
+      <san:AuthHeader>\r
+         <!--Optional:-->\r
+         <san:CompanyName>et carcere</san:CompanyName>\r
+         <!--Optional:-->\r
+         <san:WebKey>iovis rapidum iaculata</san:WebKey>\r
+      </san:AuthHeader>\r
+   </soapenv:Header>\r
+   <soapenv:Body>\r
+      <san:ImportCustomTime>\r
+         <!--Optional:-->\r
+         <san:CustomTimeCollection>\r
+            <!--Zero or more repetitions:-->\r
+            <san:CustomTime>\r
+               <!--Optional:-->\r
+               <san:ACDName>gero et</san:ACDName>\r
+               <san:StartDate>2013-11-23T06:44:07</san:StartDate>\r
+               <san:EndDate>2014-06-09T08:15:04-07:00</san:EndDate>\r
+               <san:SessionID>10</san:SessionID>\r
+               <san:RelatedCallID>10</san:RelatedCallID>\r
+               <san:EmpGroup1ID>3</san:EmpGroup1ID>\r
+               <san:EmpGroup2ID>3</san:EmpGroup2ID>\r
+               <san:EmpGroup3ID>3</san:EmpGroup3ID>\r
+               <san:EmpGroup4ID>3</san:EmpGroup4ID>\r
+               <san:EmpGroup5ID>3</san:EmpGroup5ID>\r
+               <san:RecGroup1ID>3</san:RecGroup1ID>\r
+               <san:RecGroup2ID>3</san:RecGroup2ID>\r
+               <san:RecGroup3ID>3</san:RecGroup3ID>\r
+               <san:RecGroup4ID>3</san:RecGroup4ID>\r
+               <san:RecGroup5ID>3</san:RecGroup5ID>\r
+               <!--Optional:-->\r
+               <san:TimeType>per auras</san:TimeType>\r
+               <!--Optional:-->\r
+               <san:TimeCategory>circum claustra</san:TimeCategory>\r
+               <!--Optional:-->\r
+               <san:TimeClass>nimborum in</san:TimeClass>\r
+               <!--Optional:-->\r
+               <san:TimeClass2>foedere certo</san:TimeClass2>\r
+               <!--Optional:-->\r
+               <san:TimeClass3>profundum quippe ferant</san:TimeClass3>\r
+            </san:CustomTime>\r
+         </san:CustomTimeCollection>\r
+      </san:ImportCustomTime>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://ClearViewPortal.com/211SanDiego/ImportCustomTime"/></con:call></con:operation><con:operation id="1c99edbe-43ea-4540-831e-10f872e6dace" isOneWay="false" action="http://ClearViewPortal.com/211SanDiego/TestConnection" name="TestConnection" bindingOperationName="TestConnection" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="6662bf4a-e787-44db-958b-f809d77c0cd8" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://211sandiego.clearviewportal.com/ClearViewWS/CustomServices/WS_211SanDiego.asmx</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:san="http://ClearViewPortal.com/211SanDiego/">\r
+   <soapenv:Header>\r
+      <san:AuthHeader>\r
+         <!--Optional:-->\r
+         <san:CompanyName>gero et</san:CompanyName>\r
+         <!--Optional:-->\r
+         <san:WebKey>sonoras imperio</san:WebKey>\r
+      </san:AuthHeader>\r
+   </soapenv:Header>\r
+   <soapenv:Body>\r
+      <san:TestConnection/>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://ClearViewPortal.com/211SanDiego/TestConnection"/></con:call></con:operation></con:interface><con:properties/><con:wssContainer/><con:oAuth2ProfileContainer/></con:soapui-project>
