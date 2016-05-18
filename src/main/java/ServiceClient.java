@@ -129,7 +129,8 @@ public class ServiceClient {
                 cd.setRecGroup3ID(2);
                 cd.setRecGroup4ID(1);
                 cd.setRecGroup5ID(0);
-                cd.setDataType("WSImport"); // For production user Inbound Calls.
+                //cd.setDataType("WSImport"); // Test.
+                cd.setDataType("Inbound Calls"); // Production.
 
                 if ( i < dataTypes.size()) {
                     String acdName = dataTypes.get(i);
